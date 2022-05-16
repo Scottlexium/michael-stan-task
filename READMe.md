@@ -1,34 +1,41 @@
 # POST /clients save user
-[]: # Method: POST
-[]: # URL: /clients
-[]: # Body:
+  ## Method: POST
+  ### ENDPOINT: /clients
+  ### Body:
+  
+  ```
 {
   "name": "John Doe",
   "email": "test@email.com",
   "password": "123456"
     }
-[]: # Response:
+  Response:
 {
    {"user": "6282ad4cb3ad101440762e29"}
 }
-
+  ```
 # POST /clients/login
-[]: # Method: POST
-[]: # URL: /clients/login
-[]: # Body:
+  ## Method: POST
+  ### ENDPOINT: /clients/login
+  ### Body:
+  
+  ```
 {
   "email": "test@email.com",
   "password": "123456"
     }
-[]: # Response:
+  Response:
 {
    {"user": "6282ad4cb3ad101440762e29"}
 }
+  ```
 
 # GET /clients/:id
-[]: # Method: GET
-[]: # URL: /clients/:id
-[]: # Response:
+   ## Method: GET
+   ### ENDPOINT: /clients/:id
+   ### Response:
+   
+   ```
 {
    {
   "_id": "6282ad4cb3ad101440762e29",
@@ -41,11 +48,14 @@
   "__v": 0
    }
 }
-
+  ```
 # GET /clients
-[]: # Method: GET
-[]: # URL: /clients
-[]: # Response:
+   ## Method: GET
+   ### ENDPOINT: /clients
+   ### Response:
+   
+   
+   ```
 {
 [
     {
@@ -70,3 +80,4 @@
   }
 ]
 }
+   ```

@@ -15,11 +15,15 @@ const port = 3020;
 // connect monogoose
 
 
-app.listen(port, () => {
-    mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
-        console.log('connected to mongoose');
-        console.log(`Listening on http://localhost:${port}`)
-    });
+app.listen(port, async () => {
+    try {
+        mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true, useUnifiedTopology: true }, () => {
+            console.log('connected to mongoose');
+            console.log(`Listening on http://localhost:${port}`)
+        });
+    } catch (error) {
+        console.log(error)
+    }
 });
 // serve static files from the public directory
 app.use(express.static('public'));
